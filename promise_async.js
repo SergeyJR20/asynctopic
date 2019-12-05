@@ -32,14 +32,6 @@ async function createHtml (dataPath, templatePath, outputPath) {
     .then(record => {
       return writeFile(outputPath, record)
     })
-    .then(record => {
-      console.log('2', new Date())
-      return 1
-    })
 }
 
-createHtml.then(console.log('3', new Date()))
-
-console.log('1', new Date())
 createHtml(data, template, output)
-
